@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>门禁管理系统</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <h1>门禁管理系统</h1>
+    <span class="subtitle">区域 · 门禁点 · 读卡器 · 人员 · 凭证 · 通行记录 · 时段规则 · 排班 · 告警</span>
+  </header>
+
+  <main class="container">
+    <section class="cards" id="stats-cards"></section>
+
+    <section class="panel">
+      <div class="panel-head">
+        <h2>凭证状态分布</h2>
+      </div>
+      <div id="credential-stats" class="chips"></div>
+    </section>
+
+    <section class="panel">
+      <div class="panel-head">
+        <h2>区域通行量</h2>
+      </div>
+      <table class="grid" id="zone-traffic">
+        <thead><tr><th>区域</th><th>授权通过</th><th>拒绝</th><th>合计</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </section>
+
+    <section class="panel">
+      <div class="panel-head">
+        <h2>通行记录</h2>
+      </div>
+      <table class="grid" id="access-logs">
+        <thead><tr><th>ID</th><th>门禁点</th><th>方向</th><th>结果</th><th>原因</th><th>时间</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="/app.js"></script>
+</body>
+</html>
